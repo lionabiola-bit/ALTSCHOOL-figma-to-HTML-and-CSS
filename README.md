@@ -7,6 +7,10 @@ Static HTML and CSS conversion of the **AltSchoolV2 Exam** Figma design: a URL-s
 - Colours, spacing, type sizes and copy follow the Figma file. Font is Outfit (Google Fonts) as a stand-in for Gilroy.
 - Logo, hero artwork, FAQ/footer/closing backgrounds and footer brand are SVGs exported from Figma (in `assets/`). Small UI icons are inline SVG.
 
+## How to view it
+
+https://lionabiola-bit.github.io/ALTSCHOOL-figma-to-HTML-and-CSS/
+
 ## Structure
 
 ```
