@@ -66,9 +66,10 @@
     <header class="header">
       <a class="logo" href="#home" aria-label="Scissor home"><img src="assets/logo.svg" width="155" height="40" alt="Scissor" /></a>
 
-      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+      <input class="nav-check" type="checkbox" id="nav-check" aria-label="Toggle menu" aria-controls="site-menu" />
+      <label class="nav-toggle" for="nav-check" aria-hidden="true">
         <span></span><span></span><span></span>
-      </button>
+      </label>
 
       <div class="header__menu" id="site-menu">
         <nav class="nav" aria-label="Main">
@@ -215,7 +216,7 @@
 
   <!-- ================= SHORTEN FORM ================= -->
   <section class="shorten waves" id="shorten">
-    <form class="shorten__card" action="#" onsubmit="return false">
+    <form class="shorten__card" action="#shorten">
       <input class="field field--url" type="url" name="url" placeholder="Paste URL here..." aria-label="Paste URL here" />
       <div class="shorten__row">
         <div class="select">
@@ -247,77 +248,86 @@
       <h2 class="title-bar title-bar--center">FAQs</h2>
 
       <div class="faq__list">
-        <div class="faq__item is-open">
-          <button class="faq__q" type="button" aria-expanded="true">
+        <details class="faq__item" name="faq" open>
+          <summary class="faq__q">
             <span>How does URL shortening work?</span>
-            <svg class="faq__icon" aria-hidden="true"><use href="#i-minus" /></svg>
-          </button>
+            <svg class="faq__icon faq__icon--plus" aria-hidden="true"><use href="#i-plus" /></svg>
+            <svg class="faq__icon faq__icon--minus" aria-hidden="true"><use href="#i-minus" /></svg>
+          </summary>
           <div class="faq__a"><p>URL shortening works by taking a long URL and creating a shorter, condensed version that redirects to the original URL. When a user clicks on the shortened link, they are redirected to the intended destination.</p></div>
-        </div>
+        </details>
 
-        <div class="faq__item">
-          <button class="faq__q" type="button" aria-expanded="false">
+        <details class="faq__item" name="faq">
+          <summary class="faq__q">
             <span>Is it necessary to create an account to use the URL shortening service?</span>
-            <svg class="faq__icon" aria-hidden="true"><use href="#i-plus" /></svg>
-          </button>
+            <svg class="faq__icon faq__icon--plus" aria-hidden="true"><use href="#i-plus" /></svg>
+            <svg class="faq__icon faq__icon--minus" aria-hidden="true"><use href="#i-minus" /></svg>
+          </summary>
           <div class="faq__a"><p>You can shorten links without signing in, but an account unlocks custom aliases, branded domains, link history and analytics.</p></div>
-        </div>
+        </details>
 
-        <div class="faq__item">
-          <button class="faq__q" type="button" aria-expanded="false">
+        <details class="faq__item" name="faq">
+          <summary class="faq__q">
             <span>Are the shortened links permanent? Will they expire?</span>
-            <svg class="faq__icon" aria-hidden="true"><use href="#i-plus" /></svg>
-          </button>
+            <svg class="faq__icon faq__icon--plus" aria-hidden="true"><use href="#i-plus" /></svg>
+            <svg class="faq__icon faq__icon--minus" aria-hidden="true"><use href="#i-minus" /></svg>
+          </summary>
           <div class="faq__a"><p>Links stay active for as long as your account is active, unless you choose to set an expiry date or delete them yourself.</p></div>
-        </div>
+        </details>
 
-        <div class="faq__item">
-          <button class="faq__q" type="button" aria-expanded="false">
+        <details class="faq__item" name="faq">
+          <summary class="faq__q">
             <span>Are there any limitations on the number of URLs I can shorten?</span>
-            <svg class="faq__icon" aria-hidden="true"><use href="#i-plus" /></svg>
-          </button>
+            <svg class="faq__icon faq__icon--plus" aria-hidden="true"><use href="#i-plus" /></svg>
+            <svg class="faq__icon faq__icon--minus" aria-hidden="true"><use href="#i-minus" /></svg>
+          </summary>
           <div class="faq__a"><p>The Basic plan includes unlimited URL shortening. Paid plans add team features, deeper analytics and priority support.</p></div>
-        </div>
+        </details>
 
-        <div class="faq__item">
-          <button class="faq__q" type="button" aria-expanded="false">
+        <details class="faq__item" name="faq">
+          <summary class="faq__q">
             <span>Can I customize the shortened URLs to reflect my brand or content?</span>
-            <svg class="faq__icon" aria-hidden="true"><use href="#i-plus" /></svg>
-          </button>
+            <svg class="faq__icon faq__icon--plus" aria-hidden="true"><use href="#i-plus" /></svg>
+            <svg class="faq__icon faq__icon--minus" aria-hidden="true"><use href="#i-minus" /></svg>
+          </summary>
           <div class="faq__a"><p>Yes. Choose your own alias, and on paid plans connect a custom branded domain so every link carries your brand.</p></div>
-        </div>
+        </details>
 
-        <div class="faq__item">
-          <button class="faq__q" type="button" aria-expanded="false">
+        <details class="faq__item" name="faq">
+          <summary class="faq__q">
             <span>Can I track the performance of my shortened URLs?</span>
-            <svg class="faq__icon" aria-hidden="true"><use href="#i-plus" /></svg>
-          </button>
+            <svg class="faq__icon faq__icon--plus" aria-hidden="true"><use href="#i-plus" /></svg>
+            <svg class="faq__icon faq__icon--minus" aria-hidden="true"><use href="#i-minus" /></svg>
+          </summary>
           <div class="faq__a"><p>Every link comes with analytics showing clicks and scans, and the Professional plan adds enhanced reporting.</p></div>
-        </div>
+        </details>
 
-        <div class="faq__item">
-          <button class="faq__q" type="button" aria-expanded="false">
+        <details class="faq__item" name="faq">
+          <summary class="faq__q">
             <span>How secure is the URL shortening service? Are the shortened links protected against spam or malicious activity?</span>
-            <svg class="faq__icon" aria-hidden="true"><use href="#i-plus" /></svg>
-          </button>
+            <svg class="faq__icon faq__icon--plus" aria-hidden="true"><use href="#i-plus" /></svg>
+            <svg class="faq__icon faq__icon--minus" aria-hidden="true"><use href="#i-minus" /></svg>
+          </summary>
           <div class="faq__a"><p>Links are screened for spam and malicious destinations, and the Teams plan adds enhanced security controls and user permissions.</p></div>
-        </div>
+        </details>
 
-        <div class="faq__item">
-          <button class="faq__q" type="button" aria-expanded="false">
+        <details class="faq__item" name="faq">
+          <summary class="faq__q">
             <span>What is a QR code and what can it do?</span>
-            <svg class="faq__icon" aria-hidden="true"><use href="#i-plus" /></svg>
-          </button>
+            <svg class="faq__icon faq__icon--plus" aria-hidden="true"><use href="#i-plus" /></svg>
+            <svg class="faq__icon faq__icon--minus" aria-hidden="true"><use href="#i-minus" /></svg>
+          </summary>
           <div class="faq__a"><p>A QR code is a scannable image that opens a link on a phone. Use it on print, packaging or events to send people straight to your page.</p></div>
-        </div>
+        </details>
 
-        <div class="faq__item">
-          <button class="faq__q" type="button" aria-expanded="false">
+        <details class="faq__item" name="faq">
+          <summary class="faq__q">
             <span>Is there an API available for integrating the URL shortening service into my own applications or websites?</span>
-            <svg class="faq__icon" aria-hidden="true"><use href="#i-plus" /></svg>
-          </button>
+            <svg class="faq__icon faq__icon--plus" aria-hidden="true"><use href="#i-plus" /></svg>
+            <svg class="faq__icon faq__icon--minus" aria-hidden="true"><use href="#i-minus" /></svg>
+          </summary>
           <div class="faq__a"><p>Yes. API access is included with the Teams plan so you can create and manage links from your own apps.</p></div>
-        </div>
+        </details>
       </div>
     </div>
   </section>
@@ -387,6 +397,5 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>
