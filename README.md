@@ -1,6 +1,6 @@
 # Scissor landing page (Figma to HTML/CSS)
 
-Static HTML and CSS conversion of the **AltSchoolV2 Exam** Figma design: a URL-shortener landing page with hero, stats, features, pricing, shorten form, FAQs, closing call to action and footer.
+Static HTML and CSS conversion of the **AltSchoolV2 Exam** Figma design: https://www.figma.com/design/Ug5dFpdPeyOy1NNAmZxfov/AltSchoolV2-Exam?node-id=0-1&p=f 
 
 - Plain HTML and CSS only (the mobile menu and FAQ accordion are built without JavaScript). No build step.
 - Designed at 1440px wide and fluid/responsive below that (tablet and mobile layouts).
